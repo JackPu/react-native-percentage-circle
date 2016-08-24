@@ -12,20 +12,44 @@ import {
   View
 } from 'react-native';
 
+import PercentageCircle from 'react-native-percentage-circle';
+
+
+
+
 class rnpc_demo extends Component {
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to React Native!
+          Use React Native Percentage Circle
         </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
+        <View style={styles.row}>
+          <View style={styles.item}>
+            <PercentageCircle radius={35} percent={50} color={"#3498db"}></PercentageCircle>  
+            <Text style={[styles.percentText]}> 50% </Text>
+          </View>
+          <View style={styles.item}>
+            <PercentageCircle radius={35} percent={30} color={"#f39c12"}></PercentageCircle>  
+            <Text style={[styles.percentText]}> 30% </Text>
+          </View>
+          <View style={styles.item}>
+            <PercentageCircle radius={35} percent={75} color={"#2ecc71"}></PercentageCircle>  
+            <Text style={[styles.percentText]}> 75% </Text>
+          </View>
+        </View>
+        <View style={styles.row}>
+          <View style={styles.item}>
+            <PercentageCircle radius={60} percent={90} color={"#34495e"}></PercentageCircle>  
+            <Text style={[styles.percentText]}> 80% </Text> 
+          </View>
+        </View>
+        <View style={styles.row}>
+          <View style={styles.item}>
+            <PercentageCircle radius={60} percent={100} color={"#9b59b6"}></PercentageCircle>  
+            <Text style={[styles.percentText]}> 100% </Text> 
+          </View>
+        </View>
       </View>
     );
   }
@@ -34,14 +58,30 @@ class rnpc_demo extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    paddingTop:66,
+    backgroundColor: '#fff',
   },
   welcome: {
-    fontSize: 20,
+    fontSize: 16,
     textAlign: 'center',
-    margin: 10,
+    margin: 20,
+  },
+  row:{
+    flexDirection:'row',
+    alignItems:'center',
+    flexWrap:'wrap',
+    marginBottom:40,
+  },
+  item:{
+    flex:.33,
+    justifyContent:'center',
+    alignItems:'center',
+  },
+  percentText:{
+    fontSize:15,
+    paddingTop:10,
   },
   instructions: {
     textAlign: 'center',

@@ -7,7 +7,6 @@ import React, {Component} from 'react';
 import {
   StyleSheet,
   View,
-  Image,
   Text,
 } from 'react-native';
 
@@ -150,3 +149,4 @@ class PercentageCircle extends Component {
 };
 
 module.exports = PercentageCircle;
+    
