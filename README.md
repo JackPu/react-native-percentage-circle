@@ -1,6 +1,8 @@
-# react-native-percentage-circle
+# react-native-percentage-circle <img src="https://camo.githubusercontent.com/3968e0ea333f986243e5e631b01d1ee2f45552bd/68747470733a2f2f62616467652e667572792e696f2f6a732f72656163742d6e61746976652d7363726f6c6c61626c652d7461622d766965772e737667"/>
 
-<img src="https://camo.githubusercontent.com/3968e0ea333f986243e5e631b01d1ee2f45552bd/68747470733a2f2f62616467652e667572792e696f2f6a732f72656163742d6e61746976652d7363726f6c6c61626c652d7461622d766965772e737667"/>
+
+
+<img src="http://img1.vued.vanthink.cn/vuede4474d80623ab3d17f2ca5aeb1ccd194.png"/>
 
 React Native Version >= 0.25
 
@@ -33,7 +35,7 @@ redner() {
 
 | Props        | Type         | Example  | Description  |
 | ------------- |:-------------:| -----:|----------:|
-| color     | string | '#000' | the color og border |
+| color     | string | '#000' | the color of border |
 | percent      | Number      |  30 | the percent you need |
 | radius | Number     |    20 | how large the circle is |
 
@@ -41,7 +43,7 @@ redner() {
 
 Your contributions and suggestions are welcome 😄😄😄
 
-###MIT License
+### MIT License
 
 
 
