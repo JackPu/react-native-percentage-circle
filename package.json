@@ -1,6 +1,6 @@
 {
   "name": "react-native-percentage-circle",
-  "version": "0.9.8",
+  "version": "0.9.9",
   "description": "react native percentage circle and also be a progress bar",
   "main": "index.js",
   "scripts": {

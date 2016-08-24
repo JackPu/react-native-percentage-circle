@@ -41,7 +41,7 @@ class rnpc_demo extends Component {
         <View style={styles.row}>
           <View style={styles.item}>
             <PercentageCircle radius={60} percent={90} color={"#34495e"}></PercentageCircle>  
-            <Text style={[styles.percentText]}> 80% </Text> 
+            <Text style={[styles.percentText]}> 90% </Text> 
           </View>
         </View>
         <View style={styles.row}>
