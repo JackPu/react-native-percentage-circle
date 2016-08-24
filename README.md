@@ -31,15 +31,15 @@ redner() {
 
 ### Options
 
-| Props        | Type         | Example  |
-| ------------- |:-------------:| -----:|
-| color     | string | '#000' |
-| percent      | Number      |  30 |
-| radius | Number     |    20 |
+| Props        | Type         | Example  | Description  |
+| ------------- |:-------------:| -----:|----------:|
+| color     | string | '#000' | the color og border |
+| percent      | Number      |  30 | the percent you need |
+| radius | Number     |    20 | how large the circle is |
 
 ### Contributions
 
-Your contributions and suggestions are heartily♡ welcome. (✿◠‿◠)
+Your contributions and suggestions are welcome 😄😄😄
 
 ###MIT License
 
