@@ -58,12 +58,15 @@ class PercentageCircle extends Component {
     color: React.PropTypes.string,
     radius: React.PropTypes.number,
     percent: React.PropTypes.number,
+    borderWidth: React.Proptypes.number,    
     disabled: React.PropTypes.bool  
   }
   
   constructor(props) {
     super(props);
     
+      
+      
     let percent = this.props.percent;
     let leftTransformerDegree = '0deg';
     let rightTransformerDegree = '0deg';
@@ -76,6 +79,7 @@ class PercentageCircle extends Component {
     
     this.state = {
       percent:this.props.percent,
+      borderWidth: this.props.borderWidth < 2 || !this.props.borderWidth ? 2 : this.props.borderWidth,
       leftTransformerDegree: leftTransformerDegree,
       rightTransformerDegree: rightTransformerDegree
     };
@@ -133,9 +137,9 @@ class PercentageCircle extends Component {
           }]}></View>
         </View>  
             <View style={[styles.innerCircle,{
-              width:(this.props.radius-2)*2 , 
-              height:(this.props.radius-2)*2,
-              borderRadius:this.props.radius - 2,
+              width:(this.props.radius - this.state.borderWidth)*2, 
+              height:(this.props.radius - this.state.borderWidth)*2,
+              borderRadius:this.props.radius - this.state.borderWidth,
               backgroundColor: '#fff',
             }]}>
               <Text style={styles.text}>{this.state.percent}%</Text>

@@ -16,7 +16,6 @@ import PercentageCircle from 'react-native-percentage-circle';
 
 
 
-
 class rnpc_demo extends Component {
   render() {
     return (
@@ -40,7 +39,7 @@ class rnpc_demo extends Component {
         </View>
         <View style={styles.row}>
           <View style={styles.item}>
-            <PercentageCircle radius={60} percent={90} color={"#34495e"}></PercentageCircle>  
+            <PercentageCircle radius={60} percent={90} borderWidth color={"#34495e"}></PercentageCircle>  
             <Text style={[styles.percentText]}> 90% </Text> 
           </View>
         </View>
