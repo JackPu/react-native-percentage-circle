@@ -64,9 +64,7 @@ class PercentageCircle extends Component {
   
   constructor(props) {
     super(props);
-    
-      
-      
+ 
     let percent = this.props.percent;
     let leftTransformerDegree = '0deg';
     let rightTransformerDegree = '0deg';
@@ -83,10 +81,26 @@ class PercentageCircle extends Component {
       leftTransformerDegree: leftTransformerDegree,
       rightTransformerDegree: rightTransformerDegree
     };
-    
-    
   }
-
+    
+  componentWillReceiveProps(nextProps) {
+    let percent = nextProps.percent;
+    let leftTransformerDegree = '0deg';
+    let rightTransformerDegree = '0deg';
+    if(percent >= 50) {
+      rightTransformerDegree = '180deg';
+      leftTransformerDegree = (percent-50)*3.6 + 'deg';
+    }else {
+      rightTransformerDegree = percent * 3.6 + 'deg'; 
+    }
+    this.setState({
+      percent:this.props.percent,
+      borderWidth: this.props.borderWidth < 2 || !this.props.borderWidth ? 2 : this.props.borderWidth,
+      leftTransformerDegree: leftTransformerDegree,
+      rightTransformerDegree: rightTransformerDegree
+    });
+  }
+  
   render() {
     if(this.props.disabled) {
       return(
@@ -142,7 +156,7 @@ class PercentageCircle extends Component {
               borderRadius:this.props.radius - this.state.borderWidth,
               backgroundColor: '#fff',
             }]}>
-              <Text style={styles.text}>{this.state.percent}%</Text>
+              <Text style={styles.text}>{this.props.percent}%</Text>
             </View>
             
         </View>

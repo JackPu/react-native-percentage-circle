@@ -13,10 +13,39 @@ import {
 } from 'react-native';
 
 import PercentageCircle from 'react-native-percentage-circle';
-
+import TimerMixin from 'react-timer-mixin';
 
 
 class rnpc_demo extends Component {
+    
+  constructor(props) {
+    super(props);
+    this.state = {
+      percent: 10,
+    };
+    
+    
+   
+  }
+  
+  componentDidMount() {
+    let self = this;
+    this.intval = setInterval(
+      () => { 
+        let s = this.state.percent % 100;
+        s += 1;
+        self.setState({
+          percent: s,
+        })
+      },
+      1000/60
+    );  
+  }
+  
+  componentWillUnmount() {
+    //this.intval && clearInterval(this.intval);
+  }
+    
   render() {
     return (
       <View style={styles.container}>
@@ -45,8 +74,8 @@ class rnpc_demo extends Component {
         </View>
         <View style={styles.row}>
           <View style={styles.item}>
-            <PercentageCircle radius={60} percent={100} color={"#9b59b6"}></PercentageCircle>  
-            <Text style={[styles.percentText]}> 100% </Text> 
+            <PercentageCircle radius={60} percent={this.state.percent} color={"#9b59b6"}></PercentageCircle>  
+            <Text style={[styles.percentText]}> {this.state.percent} %</Text> 
           </View>
         </View>
       </View>
