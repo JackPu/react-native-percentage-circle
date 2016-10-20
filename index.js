@@ -46,20 +46,17 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 11,
     color: '#888',
-
   },
 });
 
-
-  
 class PercentageCircle extends Component {
-   
   propTypes:{
     color: React.PropTypes.string,
     radius: React.PropTypes.number,
     percent: React.PropTypes.number,
-    borderWidth: React.Proptypes.number,    
-    disabled: React.PropTypes.bool  
+    borderWidth: React.Proptypes.number,
+    textStyle: React.Proptypes.array,
+    disabled: React.PropTypes.bool,
   }
   
   constructor(props) {
@@ -79,7 +76,8 @@ class PercentageCircle extends Component {
       percent:this.props.percent,
       borderWidth: this.props.borderWidth < 2 || !this.props.borderWidth ? 2 : this.props.borderWidth,
       leftTransformerDegree: leftTransformerDegree,
-      rightTransformerDegree: rightTransformerDegree
+      rightTransformerDegree: rightTransformerDegree,
+      textStyle:this.props.textStyle ? this.props.textStyle : null
     };
   }
     
@@ -138,7 +136,6 @@ class PercentageCircle extends Component {
           left:this.props.radius,
           width: this.props.radius,
           height: this.props.radius * 2,
-          left:this.props.radius,
         }]}>
           <View style={[styles.loader,{
             left:-this.props.radius,
@@ -156,7 +153,7 @@ class PercentageCircle extends Component {
               borderRadius:this.props.radius - this.state.borderWidth,
               backgroundColor: '#fff',
             }]}>
-              <Text style={styles.text}>{this.props.percent}%</Text>
+              <Text style={[styles.text, this.state.textStyle]}>{this.props.percent}%</Text>
             </View>
             
         </View>
@@ -167,4 +164,3 @@ class PercentageCircle extends Component {
 };
 
 module.exports = PercentageCircle;
-    
