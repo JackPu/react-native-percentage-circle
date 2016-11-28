@@ -1,6 +1,7 @@
 /** React Native Percentage Circle
 ** @github  https://github.com/JackPu/react-native-percentage-circle 
 ** React Native Version >=0.25
+** to fixed react native version 
 **/
 
 import React, {Component} from 'react';
@@ -14,7 +15,6 @@ const styles = StyleSheet.create({
   circle: {
     overflow: 'hidden',
     position: 'relative',
-    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#e3e3e3',

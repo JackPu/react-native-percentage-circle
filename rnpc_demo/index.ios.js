@@ -9,10 +9,11 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  Image
 } from 'react-native';
 
-import PercentageCircle from 'react-native-percentage-circle';
+import PercentageCircle from './pr.js';
 import TimerMixin from 'react-timer-mixin';
 
 
@@ -24,8 +25,6 @@ class rnpc_demo extends Component {
       percent: 10,
     };
     
-    
-   
   }
   
   componentDidMount() {
@@ -78,6 +77,7 @@ class rnpc_demo extends Component {
             <Text style={[styles.percentText]}> {this.state.percent} %</Text> 
           </View>
         </View>
+        
       </View>
     );
   }
@@ -97,6 +97,7 @@ const styles = StyleSheet.create({
     margin: 20,
   },
   row:{
+    //height:0,
     flexDirection:'row',
     alignItems:'center',
     flexWrap:'wrap',
@@ -116,6 +117,7 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
+ 
 });
 
 AppRegistry.registerComponent('rnpc_demo', () => rnpc_demo);
