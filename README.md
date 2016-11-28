@@ -39,6 +39,7 @@ redner() {
 | percent      | Number      |  30 | the percent you need |
 | radius | Number     |    20 | how large the circle is |
 | borderWidth | Number(default 2)     |    5 | the width of  percentage progress bar |
+| textStyle | Array   | {fontSize: 24, color: 'red'} | define the style of the text which in the circle |
 ### Contributions
 
 Your contributions and suggestions are welcome 😄😄😄
