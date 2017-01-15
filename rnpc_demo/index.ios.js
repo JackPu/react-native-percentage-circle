@@ -57,7 +57,10 @@ class rnpc_demo extends Component {
             <Text style={[styles.percentText]}> 50% </Text>
           </View>
           <View style={styles.item}>
-            <PercentageCircle radius={35} percent={30} color={"#f39c12"}></PercentageCircle>  
+            <PercentageCircle radius={35} percent={30} color={"#f39c12"}>
+              <Text style={styles.checkin}>30</Text>
+              <Text style={styles.desc}>人已签到</Text>
+            </PercentageCircle>  
             <Text style={[styles.percentText]}> 30% </Text>
           </View>
           <View style={styles.item}>
@@ -116,6 +119,15 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#333333',
     marginBottom: 5,
+  },
+  
+  checkin: {
+    fontSize:20,
+    color: '#f39c12',
+  },
+  desc: {
+    fontSize:12,
+    color: '#999',
   },
  
 });

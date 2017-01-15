@@ -153,7 +153,7 @@ class PercentageCircle extends Component {
               borderRadius:this.props.radius - this.state.borderWidth,
               backgroundColor: '#fff',
             }]}>
-              <Text style={[styles.text, this.state.textStyle]}>{this.props.percent}%</Text>
+              {this.props.children?this.props.children:<Text style={[styles.text, this.state.textStyle]}>{this.props.percent}%</Text>}
             </View>
             
         </View>
