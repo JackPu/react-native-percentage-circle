@@ -13,7 +13,7 @@ import {
   Image
 } from 'react-native';
 
-import PercentageCircle from './pr.js';
+import PercentageCircle from 'react-native-percentage-circle';
 import TimerMixin from 'react-timer-mixin';
 
 
@@ -64,13 +64,21 @@ class rnpc_demo extends Component {
             <Text style={[styles.percentText]}> 30% </Text>
           </View>
           <View style={styles.item}>
-            <PercentageCircle radius={35} percent={75} color={"#2ecc71"}></PercentageCircle>  
+            <PercentageCircle radius={35} bgcolor="#fff" percent={75} color={"#2ecc71"}></PercentageCircle>  
             <Text style={[styles.percentText]}> 75% </Text>
           </View>
         </View>
         <View style={styles.row}>
           <View style={styles.item}>
-            <PercentageCircle radius={60} percent={90} borderWidth color={"#34495e"}></PercentageCircle>  
+            <PercentageCircle radius={60} bgcolor="#fff" borderWidth={4} percent={90} color={"#34495e"}>
+              <View style={{marginLeft:30,alignItems:'center',flexDirection:'row'}}>
+                <Image style={{width:25,height:25}} source={require('./images/shoes.png')} />
+                <Text style={{flex:1,fontSize:13}}>步数</Text>
+              </View>
+              <View>
+                <Text style={{fontSize:23,color:'#34495e'}}>20000</Text>
+              </View>
+            </PercentageCircle>  
             <Text style={[styles.percentText]}> 90% </Text> 
           </View>
         </View>

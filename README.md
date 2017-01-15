@@ -8,9 +8,11 @@
 
 React Native Version >= 0.25
 
-React-Native-Percentage-Cirlce is a component which supports you define your percent and draw the circle.And also you can use it as a progress bar.
+React-Native-Percentage-Cirlce is a component which supports you define your percent and draw the circle.And also you can use it as a progress bar.And you can show some data in a circle you want.
 
 <img src="http://img1.vued.vanthink.cn/vued467c4a48f880b36ace99599d3f2d776f.png"/>
+
+*This is a screenshot of the Demo*
 
 ### Start 
 
@@ -38,10 +40,13 @@ redner() {
 | Props        | Type         | Example  | Description  |
 | ------------- |:-------------:| -----:|----------:|
 | color     | string | '#000' | the color of border |
+| bgcolor     | string | '#e3e3e3' | the background color of the circle  |
 | percent      | Number      |  30 | the percent you need |
 | radius | Number     |    20 | how large the circle is |
 | borderWidth | Number(default 2)     |    5 | the width of  percentage progress bar |
 | textStyle | Array   | {fontSize: 24, color: 'red'} | define the style of the text which in the circle |
+| children | jsx   | <Text>123</Text> | define the children component in the circle |
+
 ### Contributions
 
 Your contributions and suggestions are welcome 😄😄😄

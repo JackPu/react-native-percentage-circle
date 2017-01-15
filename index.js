@@ -52,12 +52,16 @@ const styles = StyleSheet.create({
 class PercentageCircle extends Component {
   propTypes:{
     color: React.PropTypes.string,
+    bgcolor: React.PropTypes.string,
     radius: React.PropTypes.number,
     percent: React.PropTypes.number,
     borderWidth: React.Proptypes.number,
     textStyle: React.Proptypes.array,
     disabled: React.PropTypes.bool,
   }
+    
+ 
+  
   
   constructor(props) {
     super(props);
@@ -115,7 +119,8 @@ class PercentageCircle extends Component {
       <View style={[styles.circle,{
         width:this.props.radius*2,
         height: this.props.radius*2,
-        borderRadius:this.props.radius
+        borderRadius:this.props.radius,
+        backgroundColor: this.props.bgcolor
       }]}>
         <View style={[styles.leftWrap,{
           width: this.props.radius,
@@ -162,5 +167,9 @@ class PercentageCircle extends Component {
   }
 
 };
+// set some attributes default value
+PercentageCircle.defaultProps = {
+  bgcolor: '#e3e3e3',
+};    
 
 module.exports = PercentageCircle;

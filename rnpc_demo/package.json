@@ -8,7 +8,7 @@
   "dependencies": {
     "react": "15.2.1",
     "react-native": "^0.31.0",
-    "react-native-percentage-circle": "^0.9.7",
+    "react-native-percentage-circle": "^1.0.3",
     "react-timer-mixin": "^0.13.3"
   }
 }
