@@ -31,6 +31,11 @@ redner() {
   <View>
     <PercentageCircle radius={35} percent={50} color={"#3498db"}></PercentageCircle>  
   </View>
+   <View>
+    <PercentageCircle radius={35} percent={50} color={"#3498db"}>
+      <Image style={{width:20,height:20}} source={{require('your image')}} />
+    </PercentageCircle>  
+  </View>
 }
 
 ```
