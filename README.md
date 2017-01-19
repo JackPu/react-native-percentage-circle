@@ -27,7 +27,7 @@ import PercentageCircle from 'react-native-percentage-circle';
 
 //...
 
-redner() {
+render() {
   <View>
     <PercentageCircle radius={35} percent={50} color={"#3498db"}></PercentageCircle>  
   </View>
