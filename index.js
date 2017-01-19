@@ -53,6 +53,7 @@ class PercentageCircle extends Component {
   propTypes: {
     color: React.PropTypes.string,
     bgcolor: React.PropTypes.string,
+    innerColor: React.PropTypes.string,
     radius: React.PropTypes.number,
     percent: React.PropTypes.number,
     borderWidth: React.Proptypes.number,
@@ -154,7 +155,7 @@ class PercentageCircle extends Component {
               width:(this.props.radius - this.state.borderWidth)*2, 
               height:(this.props.radius - this.state.borderWidth)*2,
               borderRadius:this.props.radius - this.state.borderWidth,
-              backgroundColor: '#fff',
+              backgroundColor: this.props.innerColor,
             }]}>
           {this.props.children ? this.props.children :
             <Text style={[styles.text, this.state.textStyle]}>{this.props.percent}%</Text>}
@@ -168,6 +169,7 @@ class PercentageCircle extends Component {
 // set some attributes default value
 PercentageCircle.defaultProps = {
   bgcolor: '#e3e3e3',
+  innerColor: '#fff'
 };
 
 module.exports = PercentageCircle;
