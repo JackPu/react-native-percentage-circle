@@ -1,10 +1,10 @@
 /** React Native Percentage Circle
-** @github  https://github.com/JackPu/react-native-percentage-circle 
-** React Native Version >=0.25
-** to fixed react native version 
-**/
+ ** @github  https://github.com/JackPu/react-native-percentage-circle
+ ** React Native Version >=0.25
+ ** to fixed react native version
+ **/
 
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {
   StyleSheet,
   View,
@@ -20,23 +20,23 @@ const styles = StyleSheet.create({
     backgroundColor: '#e3e3e3',
   },
   leftWrap: {
-    overflow:'hidden',  
+    overflow: 'hidden',
     position: 'absolute',
-    top:0, 
+    top: 0,
   },
   rightWrap: {
     position: 'absolute',
 
   },
-    
-  loader:{
-    position:'absolute',
-    left:0,
-    top:0,
-    borderRadius:1000,
-    
+
+  loader: {
+    position: 'absolute',
+    left: 0,
+    top: 0,
+    borderRadius: 1000,
+
   },
-  
+
   innerCircle: {
     overflow: 'hidden',
     position: 'relative',
@@ -50,69 +50,68 @@ const styles = StyleSheet.create({
 });
 
 class PercentageCircle extends Component {
-  propTypes:{
+  propTypes: {
     color: React.PropTypes.string,
     bgcolor: React.PropTypes.string,
+    innerColor: React.PropTypes.string,
     radius: React.PropTypes.number,
     percent: React.PropTypes.number,
     borderWidth: React.Proptypes.number,
     textStyle: React.Proptypes.array,
     disabled: React.PropTypes.bool,
   }
-    
- 
-  
-  
+
+
   constructor(props) {
     super(props);
- 
+
     let percent = this.props.percent;
     let leftTransformerDegree = '0deg';
     let rightTransformerDegree = '0deg';
-    if(percent >= 50) {
+    if (percent >= 50) {
       rightTransformerDegree = '180deg';
-      leftTransformerDegree = (percent-50)*3.6 + 'deg';
-    }else {
-      rightTransformerDegree = percent * 3.6 + 'deg'; 
+      leftTransformerDegree = (percent - 50) * 3.6 + 'deg';
+    } else {
+      rightTransformerDegree = percent * 3.6 + 'deg';
     }
-    
+
     this.state = {
-      percent:this.props.percent,
+      percent: this.props.percent,
       borderWidth: this.props.borderWidth < 2 || !this.props.borderWidth ? 2 : this.props.borderWidth,
       leftTransformerDegree: leftTransformerDegree,
       rightTransformerDegree: rightTransformerDegree,
-      textStyle:this.props.textStyle ? this.props.textStyle : null
+      textStyle: this.props.textStyle ? this.props.textStyle : null
     };
   }
-    
+
   componentWillReceiveProps(nextProps) {
     let percent = nextProps.percent;
     let leftTransformerDegree = '0deg';
     let rightTransformerDegree = '0deg';
-    if(percent >= 50) {
+    if (percent >= 50) {
       rightTransformerDegree = '180deg';
-      leftTransformerDegree = (percent-50)*3.6 + 'deg';
-    }else {
-      rightTransformerDegree = percent * 3.6 + 'deg'; 
+      leftTransformerDegree = (percent - 50) * 3.6 + 'deg';
+    } else {
+      rightTransformerDegree = percent * 3.6 + 'deg';
     }
     this.setState({
-      percent:this.props.percent,
+      percent: this.props.percent,
       borderWidth: this.props.borderWidth < 2 || !this.props.borderWidth ? 2 : this.props.borderWidth,
       leftTransformerDegree: leftTransformerDegree,
       rightTransformerDegree: rightTransformerDegree
     });
   }
-  
+
   render() {
-    if(this.props.disabled) {
-      return(
+    if (this.props.disabled) {
+      return (
         <View style={[styles.circle,{
           width:this.props.radius*2,
           height: this.props.radius*2,
           borderRadius:this.props.radius
         }]}>
           <Text style={styles.text}>{this.props.disabledText}</Text>
-        </View>  
+        </View>
       );
     }
     return (
@@ -151,25 +150,26 @@ class PercentageCircle extends Component {
             backgroundColor:this.props.color,
             transform:[{translateX:this.props.radius/2},{rotate:this.state.rightTransformerDegree},{translateX:-this.props.radius/2}],  
           }]}></View>
-        </View>  
-            <View style={[styles.innerCircle,{
+        </View>
+        <View style={[styles.innerCircle,{
               width:(this.props.radius - this.state.borderWidth)*2, 
               height:(this.props.radius - this.state.borderWidth)*2,
               borderRadius:this.props.radius - this.state.borderWidth,
-              backgroundColor: '#fff',
+              backgroundColor: this.props.innerColor,
             }]}>
-              {this.props.children?this.props.children:<Text style={[styles.text, this.state.textStyle]}>{this.props.percent}%</Text>}
-            </View>
-            
+          {this.props.children ? this.props.children :
+            <Text style={[styles.text, this.state.textStyle]}>{this.props.percent}%</Text>}
         </View>
-    );    
 
+      </View>
+    );
   }
+}
 
-};
 // set some attributes default value
 PercentageCircle.defaultProps = {
   bgcolor: '#e3e3e3',
-};    
+  innerColor: '#fff'
+};
 
 module.exports = PercentageCircle;

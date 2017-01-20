@@ -46,6 +46,7 @@ render() {
 | ------------- |:-------------:| -----:|----------:|
 | color     | string | '#000' | the color of border |
 | bgcolor     | string | '#e3e3e3' | the background color of the circle  |
+| innerColor     | string | '#fff' | the color of the inside of the circle  |
 | percent      | Number      |  30 | the percent you need |
 | radius | Number     |    20 | how large the circle is |
 | borderWidth | Number(default 2)     |    5 | the width of  percentage progress bar |
