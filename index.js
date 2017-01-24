@@ -72,7 +72,8 @@ class PercentageCircle extends Component {
       rightTransformerDegree = '180deg';
       leftTransformerDegree = (percent - 50) * 3.6 + 'deg';
     } else {
-      rightTransformerDegree = percent * 3.6 + 'deg';
+      rightTransformerDegree = '0deg';
+      leftTransformerDegree = -(50-percent) * 3.6 + 'deg';
     }
 
     this.state = {
