@@ -149,7 +149,7 @@ class PercentageCircle extends Component {
             height: this.props.radius*2,
             borderTopRightRadius:0,
             borderBottomRightRadius:0,
-            backgroundColor: this.props.percent < 50 ? this.props.bgcolor : this.props.color,
+            backgroundColor: this.props.color,
             transform:[{translateX:this.props.radius/2},{rotate:this.state.rightTransformerDegree},{translateX:-this.props.radius/2}],  
           }]}></View>
         </View>
