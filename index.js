@@ -72,8 +72,8 @@ class PercentageCircle extends Component {
       rightTransformerDegree = '180deg';
       leftTransformerDegree = (percent - 50) * 3.6 + 'deg';
     } else {
-      rightTransformerDegree = '0deg';
-      leftTransformerDegree = -(50-percent) * 3.6 + 'deg';
+      rightTransformerDegree = percent * 3.6 + 'deg';
+      leftTransformerDegree = '0deg';
     }
 
     this.state = {
@@ -135,7 +135,7 @@ class PercentageCircle extends Component {
             borderTopLeftRadius:0,
             borderBottomLeftRadius:0,
             backgroundColor:this.props.color,
-            transform:[{translateX:-this.props.radius/2},{rotate:this.state.leftTransformerDegree},{translateX:this.props.radius/2}],  
+            transform:[{translateX:-this.props.radius/2},{rotate:this.state.leftTransformerDegree},{translateX:this.props.radius/2}],
           }]}></View>
         </View>
         <View style={[styles.leftWrap,{
@@ -150,11 +150,11 @@ class PercentageCircle extends Component {
             borderTopRightRadius:0,
             borderBottomRightRadius:0,
             backgroundColor: this.props.color,
-            transform:[{translateX:this.props.radius/2},{rotate:this.state.rightTransformerDegree},{translateX:-this.props.radius/2}],  
+            transform:[{translateX:this.props.radius/2},{rotate:this.state.rightTransformerDegree},{translateX:-this.props.radius/2}],
           }]}></View>
         </View>
         <View style={[styles.innerCircle,{
-              width:(this.props.radius - this.state.borderWidth)*2, 
+              width:(this.props.radius - this.state.borderWidth)*2,
               height:(this.props.radius - this.state.borderWidth)*2,
               borderRadius:this.props.radius - this.state.borderWidth,
               backgroundColor: this.props.innerColor,
