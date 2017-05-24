@@ -18,19 +18,19 @@ import TimerMixin from 'react-timer-mixin';
 
 
 class rnpc_demo extends Component {
-    
+
   constructor(props) {
     super(props);
     this.state = {
       percent: 10,
     };
-    
+
   }
-  
+
   componentDidMount() {
     let self = this;
     this.intval = setInterval(
-      () => { 
+      () => {
         let s = this.state.percent % 100;
         s += 1;
         self.setState({
@@ -38,13 +38,13 @@ class rnpc_demo extends Component {
         })
       },
       1000/60
-    );  
+    );
   }
-  
+
   componentWillUnmount() {
     //this.intval && clearInterval(this.intval);
   }
-    
+
   render() {
     return (
       <View style={styles.container}>
@@ -53,18 +53,18 @@ class rnpc_demo extends Component {
         </Text>
         <View style={styles.row}>
           <View style={styles.item}>
-            <PercentageCircle radius={35} percent={50} color={"#3498db"}></PercentageCircle>  
+            <PercentageCircle radius={35} percent={50} color={"#3498db"}></PercentageCircle>
             <Text style={[styles.percentText]}> 50% </Text>
           </View>
           <View style={styles.item}>
-            <PercentageCircle radius={35} percent={30} color={"#f39c12"}>
+            <PercentageCircle radius={35} percent={40} color={"#f39c12"}>
               <Text style={styles.checkin}>30</Text>
               <Text style={styles.desc}>人已签到</Text>
-            </PercentageCircle>  
+            </PercentageCircle>
             <Text style={[styles.percentText]}> 30% </Text>
           </View>
           <View style={styles.item}>
-            <PercentageCircle radius={35} bgcolor="#fff" percent={75} color={"#2ecc71"}></PercentageCircle>  
+            <PercentageCircle radius={35} bgcolor="#fff" percent={75} color={"#2ecc71"}></PercentageCircle>
             <Text style={[styles.percentText]}> 75% </Text>
           </View>
         </View>
@@ -78,17 +78,17 @@ class rnpc_demo extends Component {
               <View>
                 <Text style={{fontSize:23,color:'#34495e'}}>20000</Text>
               </View>
-            </PercentageCircle>  
-            <Text style={[styles.percentText]}> 90% </Text> 
+            </PercentageCircle>
+            <Text style={[styles.percentText]}> 90% </Text>
           </View>
         </View>
         <View style={styles.row}>
           <View style={styles.item}>
-            <PercentageCircle radius={60} percent={this.state.percent} color={"#9b59b6"}></PercentageCircle>  
-            <Text style={[styles.percentText]}> {this.state.percent} %</Text> 
+            <PercentageCircle radius={60} percent={this.state.percent} color={"#9b59b6"}></PercentageCircle>
+            <Text style={[styles.percentText]}> {this.state.percent} %</Text>
           </View>
         </View>
-        
+
       </View>
     );
   }
@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
-  
+
   checkin: {
     fontSize:20,
     color: '#f39c12',
@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
     fontSize:12,
     color: '#999',
   },
- 
+
 });
 
 AppRegistry.registerComponent('rnpc_demo', () => rnpc_demo);

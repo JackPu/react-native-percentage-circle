@@ -61,10 +61,8 @@ class PercentageCircle extends Component {
     disabled: React.PropTypes.bool,
   }
 
-
   constructor(props) {
     super(props);
-
     let percent = this.props.percent;
     let leftTransformerDegree = '0deg';
     let rightTransformerDegree = '0deg';
@@ -94,7 +92,6 @@ class PercentageCircle extends Component {
       leftTransformerDegree = (percent - 50) * 3.6 + 'deg';
     } else {
       rightTransformerDegree = percent * 3.6 + 'deg';
-      leftTransformerDegree = '0deg';
     }
     this.setState({
       percent: this.props.percent,
