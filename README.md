@@ -4,7 +4,7 @@
 
 
 
-<img src="http://img1.vued.vanthink.cn/vuede4474d80623ab3d17f2ca5aeb1ccd194.png"/>
+<img width="400" src="http://img1.vued.vanthink.cn/vuede4474d80623ab3d17f2ca5aeb1ccd194.png"/>
 
 React Native Version >= 0.25
 
