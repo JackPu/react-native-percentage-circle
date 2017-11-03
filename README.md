@@ -1,4 +1,5 @@
-# react-native-percentage-circle [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Get%20over%20170%20free%20design%20blocks%20based%20on%20Bootstrap%204&url=https://github.com/JackPu/react-native-percentage-circle
+# react-native-percentage-circle
+[![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Get%20over%20170%20free%20design%20blocks%20based%20on%20Bootstrap%204&url=https://github.com/JackPu/react-native-percentage-circle
 
 [![npm](https://img.shields.io/npm/v/react-native-percentage-circle.svg?maxAge=2592000)]()
 
