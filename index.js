@@ -4,9 +4,7 @@
  ** to fixed react native version
  **/
 
-import React, {
-  Component
-} from 'react';
+import React, { Component } from 'react';
 import {
   StyleSheet,
   View,
