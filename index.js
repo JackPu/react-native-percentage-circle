@@ -146,7 +146,7 @@ class PercentageCircle extends Component {
             borderTopLeftRadius:0,
             borderBottomLeftRadius:0,
             backgroundColor:this.props.color,
-            transform:[{translateX:-this.props.radius/2},{rotate:this.state.leftTransformerDegree},{translateX:this.props.radius/2}],  
+            transform:[{translateX:-this.props.radius/2},{rotate:this.state.leftTransformerDegree},{translateX:this.props.radius/2}],
           }]}></View>
         </View>
         <View style={[styles.leftWrap,{
@@ -160,12 +160,12 @@ class PercentageCircle extends Component {
             height: this.props.radius*2,
             borderTopRightRadius:0,
             borderBottomRightRadius:0,
-            backgroundColor: this.props.percent < 50 ? this.props.bgcolor : this.props.color,
-            transform:[{translateX:this.props.radius/2},{rotate:this.state.rightTransformerDegree},{translateX:-this.props.radius/2}],  
+            backgroundColor: this.props.color,
+            transform:[{translateX:this.props.radius/2},{rotate:this.state.rightTransformerDegree},{translateX:-this.props.radius/2}],
           }]}></View>
         </View>
         <View style={[styles.innerCircle,{
-              width:(this.props.radius - this.state.borderWidth)*2, 
+              width:(this.props.radius - this.state.borderWidth)*2,
               height:(this.props.radius - this.state.borderWidth)*2,
               borderRadius:this.props.radius - this.state.borderWidth,
               backgroundColor: this.props.innerColor,
