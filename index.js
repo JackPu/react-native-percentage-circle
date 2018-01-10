@@ -62,7 +62,6 @@ class PercentageCircle extends Component {
     rotate: React.Proptypes.number, //定义旋转角度
   }
 
-
   constructor(props) {
     super(props);
     let percent = this.props.percent;
