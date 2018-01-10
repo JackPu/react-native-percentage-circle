@@ -75,12 +75,9 @@ class PercentageCircle extends Component {
       rotate = 0;
     }
     if (percent >= 50) {
-      //rightTransformerDegree = '180deg';
-      //leftTransformerDegree = (percent - 50) * 3.6 + 'deg';
       rightTransformerDegree = 180 + rotate * 3.6 + 'deg';
       leftTransformerDegree = (percent + rotate - 50) * 3.6 + 'deg';
     } else {
-      //rightTransformerDegree = percent * 3.6 + 'deg';
       rightTransformerDegree = (percent + rotate - 50) * 3.6 + 'deg';
       leftTransformerDegree = rotate * 3.6 + 'deg';
     }
@@ -99,27 +96,15 @@ class PercentageCircle extends Component {
     let leftTransformerDegree = '0deg';
     let rightTransformerDegree = '0deg';
 
-    /*
-    if (percent >= 50) {
-      rightTransformerDegree = '180deg';
-      leftTransformerDegree = (percent - 50) * 3.6 + 'deg';
-    } else {
-      rightTransformerDegree = '0deg';
-      leftTransformerDegree = -(50 - percent) * 3.6 + 'deg';
-    }
-    */
     //初始化值
     let rotate = this.props.rotate;
     if (typeof rotate == 'undefined') {
       rotate = 0;
     }
     if (percent >= 50) {
-      //rightTransformerDegree = '180deg';
-      //leftTransformerDegree = (percent - 50) * 3.6 + 'deg';
       rightTransformerDegree = 180 + rotate * 3.6 + 'deg';
       leftTransformerDegree = (percent + rotate - 50) * 3.6 + 'deg';
     } else {
-      //rightTransformerDegree = percent * 3.6 + 'deg';
       rightTransformerDegree = (percent + rotate - 50) * 3.6 + 'deg';
       leftTransformerDegree = rotate * 3.6 + 'deg';
     }
