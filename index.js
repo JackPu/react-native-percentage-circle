@@ -65,12 +65,11 @@ class PercentageCircle extends Component {
 
   constructor(props) {
     super(props);
-
     let percent = this.props.percent;
     let leftTransformerDegree = '0deg';
     let rightTransformerDegree = '0deg';
-    //初始化值
-    let rotate = this.props.rotate;
+    
+    let rotate = this.props.rotate;//初始化值
     if (typeof rotate == 'undefined') {
       rotate = 0;
     }
@@ -96,8 +95,7 @@ class PercentageCircle extends Component {
     let leftTransformerDegree = '0deg';
     let rightTransformerDegree = '0deg';
 
-    //初始化值
-    let rotate = this.props.rotate;
+    let rotate = this.props.rotate;    //初始化值
     if (typeof rotate == 'undefined') {
       rotate = 0;
     }
