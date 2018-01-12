@@ -59,6 +59,7 @@ class PercentageCircle extends Component {
     borderWidth: React.Proptypes.number,
     textStyle: React.Proptypes.array,
     disabled: React.PropTypes.bool,
+    rotate: React.Proptypes.number, //定义旋转角度
   }
 
   constructor(props) {
@@ -66,12 +67,17 @@ class PercentageCircle extends Component {
     let percent = this.props.percent;
     let leftTransformerDegree = '0deg';
     let rightTransformerDegree = '0deg';
+    
+    let rotate = this.props.rotate;//初始化值
+    if (typeof rotate == 'undefined') {
+      rotate = 0;
+    }
     if (percent >= 50) {
-      rightTransformerDegree = '180deg';
-      leftTransformerDegree = (percent - 50) * 3.6 + 'deg';
+      rightTransformerDegree = 180 + rotate * 3.6 + 'deg';
+      leftTransformerDegree = (percent + rotate - 50) * 3.6 + 'deg';
     } else {
-      rightTransformerDegree = percent * 3.6 + 'deg';
-      leftTransformerDegree = '0deg';
+      rightTransformerDegree = (percent + rotate - 50) * 3.6 + 'deg';
+      leftTransformerDegree = rotate * 3.6 + 'deg';
     }
 
     this.state = {
@@ -87,12 +93,19 @@ class PercentageCircle extends Component {
     let percent = nextProps.percent;
     let leftTransformerDegree = '0deg';
     let rightTransformerDegree = '0deg';
-    if (percent >= 50) {
-      rightTransformerDegree = '180deg';
-      leftTransformerDegree = (percent - 50) * 3.6 + 'deg';
-    } else {
-      rightTransformerDegree = percent * 3.6 + 'deg';
+
+    let rotate = this.props.rotate;    //初始化值
+    if (typeof rotate == 'undefined') {
+      rotate = 0;
     }
+    if (percent >= 50) {
+      rightTransformerDegree = 180 + rotate * 3.6 + 'deg';
+      leftTransformerDegree = (percent + rotate - 50) * 3.6 + 'deg';
+    } else {
+      rightTransformerDegree = (percent + rotate - 50) * 3.6 + 'deg';
+      leftTransformerDegree = rotate * 3.6 + 'deg';
+    }
+
     this.setState({
       percent: this.props.percent,
       borderWidth: this.props.borderWidth < 2 || !this.props.borderWidth ? 2 : this.props.borderWidth,
