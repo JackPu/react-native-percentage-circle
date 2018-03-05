@@ -10,7 +10,7 @@ React Native Version >= 0.25
 
 React-Native-Percentage-Cirlce is a component which supports you define your percent and draw the circle.And also you can use it as a progress bar.And you can show some data in a circle you want.
 
-[react.js version](https://github.com/JackPu/reactjs-percentage-circle)
+[react.js version](https://github.com/JackPu/reactjs-percentage-circle) | [Weex version](https://github.com/JackPu/weex-percentage-circle)
 
 <img width="480" src="http://img1.vued.vanthink.cn/vued9c00a0a75734849d01def751ca10f248.png"/>
 

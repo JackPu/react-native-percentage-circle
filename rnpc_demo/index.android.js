@@ -12,7 +12,7 @@ import {
   View,
   Image
 } from 'react-native';
-import PercentageCircle from 'react-native-percentage-circle';
+import PercentageCircle from './pr';
 import TimerMixin from 'react-timer-mixin';
 
 
