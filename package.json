@@ -1,6 +1,6 @@
 {
   "name": "react-native-percentage-circle",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "react native percentage circle and also be a progress bar",
   "main": "index.js",
   "scripts": {
@@ -21,5 +21,14 @@
   "bugs": {
     "url": "https://github.com/JackPu/react-native-percentage-circle/issues"
   },
-  "homepage": "https://github.com/JackPu/react-native-percentage-circle#readme"
+  "homepage": "https://github.com/JackPu/react-native-percentage-circle#readme",
+  "dependencies": {
+    "react": "^16.3.2"
+  },
+  "devDependencies": {
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "react-dom": "^16.3.2",
+    "react-native-mock": "^0.3.1"
+  }
 }
