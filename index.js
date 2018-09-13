@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     position: 'absolute',
     top: 0,
+    zIndex: 1,
   },
   rightWrap: {
     position: 'absolute',
@@ -42,6 +43,7 @@ const styles = StyleSheet.create({
     position: 'relative',
     justifyContent: 'center',
     alignItems: 'center',
+    zIndex: 2,
   },
   text: {
     fontSize: 11,
