@@ -59,7 +59,7 @@ render() {
 | borderWidth | Number(default 2) |                               5 |             the width of percentage progress bar |
 | textStyle   |       Array       |    {fontSize: 24, color: 'red'} | define the style of the text which in the circle |
 | children    |        jsx        |              `<Text>123</Text>` |      define the children component in the circle |
-| onComplete  |     Function      | `() => console.log('complate')` |      function which will run after 100% progress |
+| onComplete  |     Function      | `() => console.log('complete')` |      function which will run after 100% progress |
 
 ### Contributions
 
