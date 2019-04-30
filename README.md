@@ -1,8 +1,7 @@
-# react-native-percentage-circle
+`# react-native-percentage-circle
+
 [![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)]()
 [![npm](https://img.shields.io/npm/v/react-native-percentage-circle.svg?maxAge=2592000)]()
-
-
 
 <img width="400" src="http://img1.vued.vanthink.cn/vuede4474d80623ab3d17f2ca5aeb1ccd194.png"/>
 
@@ -14,29 +13,35 @@ React-Native-Percentage-Cirlce is a component which supports you define your per
 
 <img width="480" src="http://img1.vued.vanthink.cn/vued9c00a0a75734849d01def751ca10f248.png"/>
 
-*This is a screenshot of the Demo*
+_This is a screenshot of the Demo_
 
-### Start 
+### Start
 
-``` bash
+```bash
 npm i react-native-percentage-circle --save
 
 ```
 
-``` js
+```js
 
 import PercentageCircle from 'react-native-percentage-circle';
 
 //...
 
+// function which will be run after 100%
+ onComplete = () => {
+    alert("Login Complete");
+  };
+
+
 render() {
   <View>
-    <PercentageCircle radius={35} percent={50} color={"#3498db"}></PercentageCircle>  
+    <PercentageCircle radius={35} percent={50} color={"#3498db"}></PercentageCircle>
   </View>
    <View>
-    <PercentageCircle radius={35} percent={50} color={"#3498db"}>
+    <PercentageCircle radius={35} percent={50} color={"#3498db"}  onComplete={this.onComplete}>
       <Image style={{width:20,height:20}} source={{require('your image')}} />
-    </PercentageCircle>  
+    </PercentageCircle>
   </View>
 }
 
@@ -44,22 +49,21 @@ render() {
 
 ### Options
 
-| Props        | Type         | Example  | Description  |
-| ------------- |:-------------:| -----:|----------:|
-| color     | string | '#000' | the color of border |
-| bgcolor     | string | '#e3e3e3' | the background color of the circle  |
-| innerColor     | string | '#fff' | the color of the inside of the circle  |
-| percent      | Number      |  30 | the percent you need |
-| radius | Number     |    20 | how large the circle is |
-| borderWidth | Number(default 2)     |    5 | the width of  percentage progress bar |
-| textStyle | Array   | {fontSize: 24, color: 'red'} | define the style of the text which in the circle |
-| children | jsx   | `<Text>123</Text>` | define the children component in the circle |
+| Props       |       Type        |                         Example |                                      Description |
+| ----------- | :---------------: | ------------------------------: | -----------------------------------------------: |
+| color       |      string       |    '#000'                       |  the color of border                             |
+| bgcolor     |      string       |    '#e3e3e3'                    |  the background color of the circle              |
+| innerColor  |      string       |    '#fff'                       |  the color of the inside of the circle           |
+| percent     |      Number       |    30                           |  the percent you need                            |
+| radius      |      Number       |    20                           |  how large the circle is                         |
+| borderWidth | Number(default 2) |    5                            |  the width of percentage progress bar            |
+| textStyle   |       Array       |    {fontSize: 24, color: 'red'} |  define the style of the text which in the circle|
+| children    |        jsx        |    `<Text>123</Text>`           |  define the children component in the circle     |
+| onComplete  |     Function      | `() => console.log('complete')` |  function which will run after 100% progress     |
 
 ### Contributions
 
 Your contributions and suggestions are welcome 😄😄😄
 
 ### MIT License
-
-
-
+`
