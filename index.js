@@ -10,6 +10,7 @@ import {
   View,
   Text,
 } from 'react-native';
+import PropTypes from 'prop-types';
 
 const styles = StyleSheet.create({
   circle: {
@@ -50,15 +51,15 @@ const styles = StyleSheet.create({
 });
 
 class PercentageCircle extends Component {
-  propTypes: {
-    color: React.PropTypes.string,
-    bgcolor: React.PropTypes.string,
-    innerColor: React.PropTypes.string,
-    radius: React.PropTypes.number,
-    percent: React.PropTypes.number,
-    borderWidth: React.Proptypes.number,
-    textStyle: React.Proptypes.array,
-    disabled: React.PropTypes.bool,
+  static propTypes = {
+    color: PropTypes.string,
+    bgcolor: PropTypes.string,
+    innerColor: PropTypes.string,
+    radius: PropTypes.number,
+    percent: PropTypes.number,
+    borderWidth: PropTypes.number,
+    textStyle: PropTypes.array,
+    disabled: PropTypes.bool,
   }
 
   constructor(props) {
