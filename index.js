@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
 });
 
 class PercentageCircle extends Component {
-  propTypes: {
+  propTypes= {
     color: React.PropTypes.string,
     bgcolor: React.PropTypes.string,
     innerColor: React.PropTypes.string,
